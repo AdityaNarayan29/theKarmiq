@@ -1,0 +1,10 @@
+node_modules/
+android/
+ios/
+.git/
+*.config.js
+babel.config.js
+metro.config.js
+jest.config.js
+coverage/
+e2e/
