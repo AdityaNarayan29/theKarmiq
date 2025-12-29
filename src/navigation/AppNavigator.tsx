@@ -26,6 +26,29 @@ export type RootStackParamList = {
 const Tab = createBottomTabNavigator<TabParamList>();
 const Stack = createStackNavigator<RootStackParamList>();
 
+// Memoized icon render functions to avoid unstable nested components
+const HomeIcon = ({ focused }: { focused: boolean }) => (
+  <TabBarIcon name="home" focused={focused} />
+);
+
+const LessonsIcon = ({ focused }: { focused: boolean }) => (
+  <TabBarIcon name="lessons" focused={focused} />
+);
+
+const KarmiqIcon = ({ focused }: { focused: boolean }) => (
+  <TabBarIcon name="karmiq" focused={focused} />
+);
+
+const BlogsIcon = ({ focused }: { focused: boolean }) => (
+  <TabBarIcon name="blogs" focused={focused} />
+);
+
+const MenuIcon = ({ focused }: { focused: boolean }) => (
+  <TabBarIcon name="menu" focused={focused} />
+);
+
+const KarmiqLabel = () => null;
+
 const TabNavigator: React.FC = () => {
   return (
     <Tab.Navigator
@@ -41,36 +64,36 @@ const TabNavigator: React.FC = () => {
         name="Home"
         component={HomeScreen}
         options={{
-          tabBarIcon: ({ focused }) => <TabBarIcon name="home" focused={focused} />,
+          tabBarIcon: HomeIcon,
         }}
       />
       <Tab.Screen
         name="Lessons"
         component={LessonsScreen}
         options={{
-          tabBarIcon: ({ focused }) => <TabBarIcon name="lessons" focused={focused} />,
+          tabBarIcon: LessonsIcon,
         }}
       />
       <Tab.Screen
         name="Karmiq"
         component={KarmiqScreen}
         options={{
-          tabBarIcon: ({ focused }) => <TabBarIcon name="karmiq" focused={focused} />,
-          tabBarLabel: () => null,
+          tabBarIcon: KarmiqIcon,
+          tabBarLabel: KarmiqLabel,
         }}
       />
       <Tab.Screen
         name="Blogs"
         component={BlogsScreen}
         options={{
-          tabBarIcon: ({ focused }) => <TabBarIcon name="blogs" focused={focused} />,
+          tabBarIcon: BlogsIcon,
         }}
       />
       <Tab.Screen
         name="Menu"
         component={MenuScreen}
         options={{
-          tabBarIcon: ({ focused }) => <TabBarIcon name="menu" focused={focused} />,
+          tabBarIcon: MenuIcon,
         }}
       />
     </Tab.Navigator>
@@ -93,17 +116,21 @@ export const AppNavigator: React.FC = () => {
 
 const styles = StyleSheet.create({
   tabBar: {
-    backgroundColor: colors.tabBarBackground,
-    borderTopWidth: 0,
+    backgroundColor: 'rgba(15, 10, 25, 0.98)',
+    borderTopWidth: 1,
+    borderTopColor: 'rgba(255, 255, 255, 0.05)',
     paddingTop: spacing.sm,
-    paddingBottom: spacing.md,
-    height: 85,
+    paddingBottom: spacing.lg,
+    height: 90,
     position: 'absolute',
     bottom: 0,
     left: 0,
     right: 0,
     elevation: 0,
-    shadowOpacity: 0,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: -4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
   },
   tabBarLabel: {
     fontSize: fontSizes.xs,
