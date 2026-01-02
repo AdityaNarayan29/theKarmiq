@@ -1,8 +1,8 @@
 export const colors = {
-  // Primary brand colors
-  primary: '#D4AF37', // Gold/Yellow accent
-  primaryLight: '#F5D76E',
-  secondary: '#6B5B95', // Purple accent
+  // Primary brand colors - brighter gold
+  primary: '#F0C656', // Brighter Gold/Yellow accent
+  primaryLight: '#FFE082',
+  secondary: '#8B7BB8', // Brighter purple accent
 
   // Background colors (dark cosmic theme)
   background: '#1A1429', // Deep purple/navy
@@ -10,18 +10,18 @@ export const colors = {
   backgroundCard: 'rgba(45, 36, 66, 0.8)', // Semi-transparent card
   backgroundGlass: 'rgba(45, 36, 66, 0.6)', // Glass effect
 
-  // Text colors
+  // Text colors - brighter
   text: '#FFFFFF',
-  textSecondary: '#B8B5C3',
-  textMuted: '#7A7789',
-  textGold: '#D4AF37',
+  textSecondary: '#CCC9D6', // Brighter secondary text
+  textMuted: '#9A97A9', // Brighter muted text
+  textGold: '#F0C656', // Brighter gold text
 
   // UI colors
-  success: '#34C759',
-  warning: '#FF9500',
-  error: '#FF3B30',
-  border: 'rgba(255, 255, 255, 0.1)',
-  borderLight: 'rgba(255, 255, 255, 0.2)',
+  success: '#4ADE80',
+  warning: '#FFB340',
+  error: '#FF5B50',
+  border: 'rgba(255, 255, 255, 0.15)',
+  borderLight: 'rgba(255, 255, 255, 0.25)',
 
   // Basic colors
   white: '#FFFFFF',
@@ -30,8 +30,8 @@ export const colors = {
 
   // Tab bar
   tabBarBackground: 'rgba(26, 20, 41, 0.95)',
-  tabBarActive: '#D4AF37',
-  tabBarInactive: '#7A7789',
+  tabBarActive: '#F0C656', // Brighter gold
+  tabBarInactive: '#9A97A9', // Brighter inactive
 } as const;
 
 export const spacing = {
@@ -71,7 +71,7 @@ export const shadows = {
     elevation: 8,
   },
   button: {
-    shadowColor: '#D4AF37',
+    shadowColor: '#F0C656',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.3,
     shadowRadius: 4,

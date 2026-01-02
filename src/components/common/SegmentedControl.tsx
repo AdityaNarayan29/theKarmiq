@@ -58,9 +58,9 @@ export const SegmentedControl: React.FC<SegmentedControlProps> = ({
         >
           <LinearGradient
             colors={[
-              'rgba(212, 175, 55, 0.25)',
-              'rgba(212, 175, 55, 0.12)',
-              'rgba(212, 175, 55, 0.05)',
+              'rgba(240, 198, 86, 0.3)',
+              'rgba(240, 198, 86, 0.15)',
+              'rgba(240, 198, 86, 0.05)',
             ]}
             locations={[0, 0.5, 1]}
             style={styles.sliderGradient}
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
     borderRadius: borderRadius.full,
     padding: spacing.xs,
     borderWidth: 1,
-    borderColor: 'rgba(212, 175, 55, 0.1)',
+    borderColor: 'rgba(240, 198, 86, 0.12)',
     position: 'relative',
   },
   sliderWrapper: {

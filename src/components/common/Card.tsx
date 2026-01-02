@@ -21,7 +21,7 @@ export const Card: React.FC<CardProps> = ({
       {/* Subtle orange glow from top */}
       {showGlow && (
         <LinearGradient
-          colors={['rgba(212, 175, 55, 0.15)', 'rgba(212, 175, 55, 0.06)', 'rgba(212, 175, 55, 0)']}
+          colors={['rgba(240, 198, 86, 0.18)', 'rgba(240, 198, 86, 0.08)', 'rgba(240, 198, 86, 0)']}
           locations={[0, 0.4, 1]}
           style={styles.glowOverlay}
         />
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     borderRadius: borderRadius.xxl,
     padding: spacing.lg,
     borderWidth: 1,
-    borderColor: 'rgba(212, 175, 55, 0.12)',
+    borderColor: 'rgba(240, 198, 86, 0.15)',
   },
   default: {
     backgroundColor: 'rgba(20, 15, 35, 0.85)',
